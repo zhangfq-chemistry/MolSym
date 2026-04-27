@@ -1,0 +1,302 @@
+
+#include <vtkObjectFactory.h>
+#include <vtkPickingManager.h>
+#include <vtkRenderWindowInteractor.h>
+#include <vtkPicker.h>
+#include <vtkCellPicker.h>
+#include <vtkPropPicker.h>
+#include <vtkPointPicker.h>
+#include <vtkRenderer.h>
+#include <vtkRenderWindow.h>
+#include <vtkExtractEdges.h>
+#include <vtkPolyDataMapper.h>
+#include <vtkProperty.h>
+#include <vtkAssemblyPath.h>
+#include "ActorInteractorStyle.h"
+
+#include <QDebug>
+
+#include "utils.h"
+
+vtkStandardNewMacro(moveActorInteractorStyle);
+
+void moveActorInteractorStyle::removeId(uint id)
+{
+     selectedActorIds.removeOne(id);
+}
+
+moveActorInteractorStyle::moveActorInteractorStyle(QObject *parent) : QObject(parent)
+{
+    HighlightColor = Qt::yellow;
+    isShiftPressed=isControlPressed=false;
+
+    selectedActorIds.clear();
+}
+
+
+void moveActorInteractorStyle::OnLeftButtonDown()
+{
+    vtkInteractorStyleTrackballCamera::OnLeftButtonDown();
+
+    int *eventPos = GetInteractor()->GetEventPosition();
+    this->FindPokedRenderer(eventPos[0], eventPos[1]);
+    GetInteractor()->StartPickCallback();
+    vtkAbstractPropPicker * picker =
+          vtkAbstractPropPicker::SafeDownCast(GetInteractor()->GetPicker());
+
+
+    vtkAssemblyPath *path = nullptr;
+    if ( picker != nullptr )
+    {
+        picker->Pick(eventPos[0], eventPos[1], 0.0, this->CurrentRenderer);
+        path = picker->GetPath();
+    }
+
+    if ( path == nullptr ) {
+        this->HighlightProp(nullptr);
+
+        //release all selection
+        selectedActors->InitTraversal();
+        uint numActors = selectedActors->GetNumberOfItems();
+
+        if(numActors)
+        for (int i=0;i<numActors;++i) {
+            vtkActor* actor = selectedActors->GetNextActor();
+            if(actor!=nullptr)
+                actor->recoverInitialColor();
+        }
+
+        //clear selected actors
+        selectedActorIds.clear();
+    }
+
+    else
+    {
+        HighlightProp(path->GetFirstNode()->GetViewProp());
+        m_pickedActor = picker->GetActor();
+        double clrArr[3];
+        vtkColor(HighlightColor, clrArr);
+        m_pickedActor->GetProperty()->SetColor(clrArr);
+    }
+    
+     //picker->GetPickList()
+
+    //multiple selection
+    if(isShiftPressed)
+    {
+        //release this actor
+        if(m_pickedActor->isPicked())
+        {
+              m_pickedActor->setPicked(false);
+
+              selectedActors->InitTraversal();
+              uint numActors = selectedActors->GetNumberOfItems();
+
+              if(numActors)
+              for (int i=0;i<numActors;++i) {
+                  vtkActor* actor = selectedActors->GetNextActor();
+                  if(actor!=nullptr && actor->isPicked())
+                      actor->recoverInitialColor();
+                  selectedActors->RemoveItem(i);
+
+              }
+
+              //remove this actor from selectedActors
+        }
+        else {
+            m_pickedActor->setPicked(true);
+            selectedActors->AddItem(m_pickedActor);
+        }
+
+        cout << "THERE are "<< selectedActors->GetNumberOfItems()<<endl;
+    }
+
+}
+
+
+void moveActorInteractorStyle::OnLeftButtonUp()
+{
+    vtkInteractorStyleTrackballCamera::OnLeftButtonUp();
+
+    if(!isShiftPressed) {
+        if(m_pickedActor)
+            m_pickedActor->recoverInitialColor();
+        else
+            selectedActors = vtkSmartPointer<vtkActorCollection> ::New();
+    }
+
+    m_pickedActor = nullptr;
+}
+
+
+void moveActorInteractorStyle::Rotate()
+{
+    if (m_pickedActor)
+        return;
+
+    vtkInteractorStyleTrackballCamera::Rotate();
+}
+
+void moveActorInteractorStyle::Spin()
+{
+    if (m_pickedActor)
+        return;
+
+    vtkInteractorStyleTrackballCamera::Spin();
+}
+
+void moveActorInteractorStyle::OnMouseMove()
+{
+    vtkInteractorStyleTrackballCamera::OnMouseMove();
+
+
+    return;
+
+    //https://www.it610.com/article/1884107.htm
+    if (m_useHighlight)
+    {
+        int x = GetInteractor()->GetEventPosition()[0];
+        int y = GetInteractor()->GetEventPosition()[1];
+
+        VTK_CREATE(vtkPicker, picker);
+        picker->SetTolerance(0.0001);
+
+        vtkRenderer * defaultRenderer = GetDefaultRenderer();
+        picker->Pick(x, y, 0, defaultRenderer);
+        double* hoverPos = picker->GetPickPosition();
+        vtkActor* hoverActor = picker->GetActor();
+        
+       
+
+
+        if (hoverActor)
+        {
+            vtkDataSet * dataSet = hoverActor->GetMapper()->GetInput();
+
+            vtkInitOnce(m_highlightActor);
+
+            m_highlightActor->SetPickable(false);
+            VTK_CREATE(vtkExtractEdges, edges);
+            edges->SetInputData(dataSet);
+
+            VTK_CREATE(vtkPolyDataMapper, mapper);
+            mapper->SetInputConnection(edges->GetOutputPort());
+
+            //transfer world position to modelview;
+            double displayPt[3];
+            ComputeWorldToDisplay(hoverPos[0], hoverPos[1], hoverPos[2],displayPt);
+            displayPt[2]=displayPt[2]*1.1;
+            //ComputeDisplayToWorld(hoverPos[0], hoverPos[1], hoverPos[2],displayPt);
+
+            double clrArr[3];
+            vtkColor(HighlightColor, clrArr);
+
+            m_highlightActor->SetMapper(mapper);
+            m_highlightActor->SetVisibility(1);
+            m_highlightActor->GetProperty()->SetColor(clrArr);
+            m_highlightActor->SetPosition(hoverPos);
+            defaultRenderer->AddActor(m_highlightActor);
+            defaultRenderer->GetRenderWindow()->Render();
+        }
+        else {
+            if (m_highlightActor) {
+                m_highlightActor->SetVisibility(0);
+                defaultRenderer->GetRenderWindow()->Render();
+            }
+        }
+    }
+
+    if (m_pickedActor) {
+        /*
+        int x = GetInteractor()->GetEventPosition()[0];
+        int y = GetInteractor()->GetEventPosition()[1];
+
+        VTK_CREATE(vtkPicker, picker);
+        picker->SetTolerance(0.001);
+        vtkRenderer* defaultRenderer = GetDefaultRenderer();
+        picker->Pick(x, y, 0, defaultRenderer);
+
+        double * movePos = picker->GetPickPosition();
+
+        double displayPt[3];
+        ComputeWorldToDisplay(movePos[0], movePos[1], movePos[2],displayPt);
+        //displayPt[2]=displayPt[2]*1.1;
+
+        m_pickedActor->SetPosition(movePos);
+        defaultRenderer->GetRenderWindow()->Render();
+        */
+    }
+
+}
+
+
+void moveActorInteractorStyle::OnKeyDown()
+{
+    vtkInteractorStyleTrackballCamera::OnKeyDown();
+
+    isAltPressed=isShiftPressed=isControlPressed=false;
+
+    if( GetInteractor()->GetAltKey() )
+         isAltPressed=true;
+
+    if( GetInteractor()->GetShiftKey())
+        isShiftPressed=true;
+
+    if( GetInteractor()-> GetControlKey() )
+        isControlPressed=true;
+
+
+    //emit ctrlPressed(GetInteractor()->GetControlKey());
+}
+
+void moveActorInteractorStyle::OnKeyUp()
+{
+    vtkInteractorStyleTrackballCamera::OnKeyUp();
+
+    isShiftPressed=false;
+    isControlPressed=false;
+    isAltPressed=true;
+
+}
+
+
+void moveActorInteractorStyle::OnChar()
+{
+    vtkInteractorStyleTrackballCamera::OnChar();
+}
+
+void moveActorInteractorStyle::setHighlightActor(bool highlight)
+{
+    m_useHighlight = highlight;
+}
+
+bool moveActorInteractorStyle::highlightActor() const
+{
+    return m_useHighlight;
+}
+
+void moveActorInteractorStyle::updateCurrentPos()
+{
+    int x = GetInteractor()->GetEventPosition()[0];
+    int y = GetInteractor()->GetEventPosition()[1];
+
+    VTK_CREATE(vtkPointPicker, picker);
+    picker->SetTolerance(0.001);
+    picker->Pick(x, y, 0, GetDefaultRenderer());
+
+    for (uint i=0;i<3;i++ )
+        m_pos[i]=picker->GetPickPosition()[i];
+
+}
+
+void moveActorInteractorStyle::getPressedActor()
+{
+    int x = GetInteractor()->GetEventPosition()[0];
+    int y = GetInteractor()->GetEventPosition()[1];
+
+    VTK_CREATE(vtkPicker, picker);
+    picker->SetTolerance(0.001);
+    picker->Pick(x, y, 0, GetDefaultRenderer());
+    m_pickedActor = picker->GetActor();
+}
+

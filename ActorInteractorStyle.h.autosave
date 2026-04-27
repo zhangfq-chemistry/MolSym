@@ -1,0 +1,108 @@
+#ifndef MOVEACTORINTERACTORSTYLE_H
+#define MOVEACTORINTERACTORSTYLE_H
+
+
+
+#include <QObject>
+#include <vtkProperty.h>
+#include <vtkInteractorStyleTrackballCamera.h>
+#include <vtkRenderWindowInteractor.h>
+
+#include <vtkCamera.h>
+#include <vtkMatrix4x4.h>
+
+#include <vtkSmartPointer.h>
+#include <vtkCommand.h>
+#include <vtkActorCollection.h>
+
+#include <QColor>
+#include <QVector>
+#include <QList>
+
+
+
+using namespace std;
+
+
+
+
+class actorInteractorStyle : public QObject, public vtkInteractorStyleTrackballCamera
+{
+    Q_OBJECT
+public:
+    static actorInteractorStyle *New();
+    vtkTypeMacro(actorInteractorStyle, vtkInteractorStyleTrackballCamera);
+
+    void OnKeyPress() override
+    {
+        // Get the keypress
+        //vtkRenderWindowInteractor * rwi = this->Interactor;
+        //std::string key = rwi->GetKeySym();
+
+        std::string key=GetInteractor()->GetKeySym();
+
+        // Output the key that was pressed
+        std::cout << "Pressed " << key << std::endl;
+
+        // Handle an arrow key
+        if(key == "Up")
+        {
+            std::cout << "The up arrow was pressed." << std::endl;
+        }
+
+        // Handle a "normal" key
+        if(key == "a")
+        {
+            std::cout << "The a key was pressed." << std::endl;
+        }
+
+        std::cout << "Pressed: " << key << std::endl;
+
+        // Forward events
+        vtkInteractorStyleTrackballCamera::OnKeyPress();
+    }
+
+    virtual void OnLeftButtonDown() override;
+    virtual void OnLeftButtonUp() override;
+    virtual void Rotate() override;
+    virtual void Spin() override;
+    virtual void OnMouseMove() override;
+    virtual void OnChar()  override;
+
+    virtual void OnKeyDown() override;
+    virtual  void OnKeyUp() override;
+
+
+    void setHighlightActor(bool highlight);
+    bool highlightActor() const;
+
+    void updateCurrentPos();
+    void getPressedActor();
+    void removeId(uint );
+
+signals:
+    void actorMoved(vtkActor * actor);
+
+protected:
+    explicit moveActorInteractorStyle(QObject *parent = 0);
+
+protected:
+    vtkSmartPointer<vtkActorCollection> selectedActors;
+
+    QList <uint> selectedActorIds;
+
+    vtkSmartPointer<vtkActor> m_pickedActor;
+
+    vtkSmartPointer<vtkProperty> PickedProperty;
+    bool m_useHighlight;
+    double m_pos[3];
+
+    vtkSmartPointer<vtkActor> m_highlightActor;
+    QColor HighlightColor;
+
+    bool isShiftPressed, isControlPressed,isAltPressed;
+};
+
+
+
+#endif // MOVEACTORINTERACTORSTYLE_H

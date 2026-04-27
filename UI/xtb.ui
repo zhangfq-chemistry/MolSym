@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShowTextForm</class>
+ <widget class="QDialog" name="ShowTextForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>730</width>
+    <height>599</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Show Text</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="5" column="1">
+    <widget class="QComboBox" name="comboBox_solvent"/>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_9">
+     <property name="text">
+      <string>Solvent</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Charge </string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="6">
+    <widget class="QPushButton" name="pushButton_Close">
+     <property name="text">
+      <string>Close</string>
+     </property>
+     <property name="icon">
+      <iconset theme="edit-copy">
+       <normaloff>../../../../bin/iboview/src/UI</normaloff>../../../../bin/iboview/src/UI</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="4">
+    <widget class="QSpinBox" name="spinBox_cycle"/>
+   </item>
+   <item row="3" column="1">
+    <widget class="QSpinBox" name="spinBox_core"/>
+   </item>
+   <item row="1" column="4">
+    <widget class="QSpinBox" name="spinBox_mulplicity"/>
+   </item>
+   <item row="1" column="1">
+    <widget class="QSpinBox" name="spinBox_charge"/>
+   </item>
+   <item row="5" column="3">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Excute Path</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_8">
+     <property name="text">
+      <string>Cores</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Multiplicity</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="5">
+    <widget class="QLineEdit" name="lineEdit_path"/>
+   </item>
+   <item row="3" column="3">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Cycles</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QCheckBox" name="checkBox">
+     <property name="text">
+      <string>Wiberg</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QCheckBox" name="checkBox_2">
+     <property name="text">
+      <string>Mulliken</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="3">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Commands</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="6">
+    <widget class="QSpinBox" name="spinBox_uhf"/>
+   </item>
+   <item row="1" column="5">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>GFN-xTB</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="6">
+    <widget class="QPushButton" name="pushButton_run">
+     <property name="text">
+      <string>run</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="5">
+    <widget class="QLineEdit" name="lineEdit_commands"/>
+   </item>
+   <item row="3" column="5">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>uhf</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="9">
+    <widget class="QTextEdit" name="textEdit">
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="acceptRichText">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="6">
+    <widget class="QSpinBox" name="spinBox_version"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

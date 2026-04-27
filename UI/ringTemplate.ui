@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RingTemplate</class>
+ <widget class="QDialog" name="RingTemplate">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>623</width>
+    <height>622</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ring Fragment</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>561</width>
+     <height>605</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="3">
+     <widget class="QPushButton" name="Frag4">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/anthr.xbm</normaloff>:/images/anthr.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QPushButton" name="Frag5">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/rings3.xbm</normaloff>:/images/rings3.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="Frag31">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/two5mr.xbm</normaloff>:/images/two5mr.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="Frag1">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/phenyl.xbm</normaloff>:/images/phenyl.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="Frag20">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/furanyl.xbm</normaloff>:/images/furanyl.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QPushButton" name="Frag34">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/656.xbm</normaloff>:/images/656.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="Frag7">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/coronene.xbm</normaloff>:/images/coronene.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="Frag19">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/cp.xbm</normaloff>:/images/cp.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="3">
+     <widget class="QPushButton" name="Frag28">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/mr7.xbm</normaloff>:/images/mr7.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="Frag32">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/asixfive.xbm</normaloff>:/images/asixfive.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4">
+     <widget class="QPushButton" name="Frag23">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/cpene.xbm</normaloff>:/images/cpene.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="Frag8">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/pyridinyl.xbm</normaloff>:/images/pyridinyl.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="Frag9">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/pyrazine.xbm</normaloff>:/images/pyrazine.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="4">
+     <widget class="QPushButton" name="Frag29">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/mr8.xbm</normaloff>:/images/mr8.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="Frag25">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/chexbt.xbm</normaloff>:/images/chexbt.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QPushButton" name="Frag10">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/pyridazine.xbm</normaloff>:/images/pyridazine.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QPushButton" name="Frag33">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/azu.xbm</normaloff>:/images/azu.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="Frag15">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/cbane.xbm</normaloff>:/images/cbane.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="5">
+     <widget class="QPushButton" name="Frag24">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/cpane.xbm</normaloff>:/images/cpane.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="Frag26">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/chexch.xbm</normaloff>:/images/chexch.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="Frag14">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/oxirane.xbm</normaloff>:/images/oxirane.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="Frag13">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/cprane.xbm</normaloff>:/images/cprane.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="Frag3">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/asixfive.xbm</normaloff>:/images/asixfive.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="Frag2">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/naphth.xbm</normaloff>:/images/naphth.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4">
+     <widget class="QPushButton" name="Frag11">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/pyrimidine.xbm</normaloff>:/images/pyrimidine.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="QPushButton" name="Frag6">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/rings4.xbm</normaloff>:/images/rings4.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QPushButton" name="Frag27">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/tropylium.xbm</normaloff>:/images/tropylium.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="Frag21">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/pyrryl.xbm</normaloff>:/images/pyrryl.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QPushButton" name="Frag22">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/thiophenyl.xbm</normaloff>:/images/thiophenyl.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QPushButton" name="Frag38">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/bicychept.xbm</normaloff>:/images/bicychept.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QPushButton" name="Frag39">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/bicycoct.xbm</normaloff>:/images/bicycoct.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QPushButton" name="Frag40">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/adamantane.xbm</normaloff>:/images/adamantane.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="4">
+     <widget class="QPushButton" name="Frag35">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/bipyr.xbm</normaloff>:/images/bipyr.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="4">
+     <widget class="QPushButton" name="Frag_C60">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/bucky.xbm</normaloff>:/images/bucky.xbm</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="5">
+     <widget class="QPushButton" name="Frag_C70">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>C70</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/UFF.png</normaloff>:/images/UFF.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="5">
+     <widget class="QPushButton" name="Frag_B12">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>B12</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/UFF.png</normaloff>:/images/UFF.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="3">
+     <widget class="QPushButton" name="Frag_C20">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>C20</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/UFF.png</normaloff>:/images/UFF.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QPushButton" name="Frag_C8H8">
+      <property name="minimumSize">
+       <size>
+        <width>81</width>
+        <height>81</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>C8H8</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../hmo.qrc">
+        <normaloff>:/images/UFF.png</normaloff>:/images/UFF.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../hmo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

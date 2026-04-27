@@ -1,0 +1,3203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1142</width>
+    <height>769</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>分子点群(sxnu)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget_3">
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>230</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>构建分子</string>
+       </attribute>
+       <widget class="QFrame" name="frame_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>291</width>
+          <height>631</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>291</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>254</width>
+           <height>151</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_15">
+          <item row="1" column="2">
+           <widget class="QPushButton" name="pushButton_removeX">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>删除X</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="pushButton_clean">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>MMFF94</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="pushButton_tmp_Draw">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>铅笔</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QPushButton" name="pushButton_tmp_R">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>有机基团</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QPushButton" name="pushButton_tmp_Metal">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>金属中心</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="checkBox_kekule">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Kekule</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="pushButton_UFF">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>UFF</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="pushButton_rebond">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>重新键连</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QPushButton" name="pushButton_tmp_Ring">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>环状分子</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButton_GAFF">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>GAFF</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="pushButton_addHydrogen">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>加氢</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButton_Ghemical">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Ghemical</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="TemplateView3d" name="openGLWidget_template">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>170</y>
+           <width>231</width>
+           <height>221</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QWidget" name="frame_21" native="true">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>400</y>
+           <width>250</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_12">
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_32">
+            <property name="font">
+             <font>
+              <family>Noto Sans CJK SC</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Y</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_30">
+            <property name="font">
+             <font>
+              <family>Noto Sans CJK SC</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Z</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_X">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Cantarell</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="maxLength">
+             <number>32</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_31">
+            <property name="font">
+             <font>
+              <family>Noto Sans CJK SC</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>X</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButton_cleardata">
+            <property name="font">
+             <font>
+              <family>Sans Serif</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>清空</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <widget class="QPushButton" name="pushButton_rotate">
+            <property name="font">
+             <font>
+              <family>Sans Serif</family>
+              <pointsize>11</pointsize>
+              <strikeout>false</strikeout>
+             </font>
+            </property>
+            <property name="text">
+             <string>旋转</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLineEdit" name="lineEdit_Z">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Cantarell</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="lineEdit_Y">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Cantarell</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QPushButton" name="pushButton_translate">
+            <property name="font">
+             <font>
+              <family>Sans Serif</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>平移</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QFrame" name="frame">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>480</y>
+           <width>241</width>
+           <height>162</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>241</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_7">
+          <item row="5" column="3">
+           <widget class="QPushButton" name="pushButton_Down">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>下旋</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../hmo.qrc">
+              <normaloff>:/images/movedown.png</normaloff>:/images/movedown.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QSpinBox" name="spinBox_angle">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="2">
+           <widget class="QPushButton" name="pushButton_Up">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>上旋</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../hmo.qrc">
+              <normaloff>:/images/moveup.png</normaloff>:/images/moveup.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QPushButton" name="pushButton_XY">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>XOY</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QPushButton" name="pushButton_XZ">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>XOZ</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QPushButton" name="pushButton_reset">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>重置</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="3">
+           <widget class="QPushButton" name="pushButton_counterclockwise">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>逆旋</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QPushButton" name="pushButton_clockwise">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>顺旋</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QPushButton" name="pushButton_YZ">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>YOZ</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="2">
+           <widget class="QPushButton" name="pushButton_left">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>左旋</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../hmo.qrc">
+              <normaloff>:/images/moveleft.png</normaloff>:/images/moveleft.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="3">
+           <widget class="QPushButton" name="pushButton_right">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>右旋</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../hmo.qrc">
+              <normaloff>:/images/moveright.png</normaloff>:/images/moveright.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <widget class="QCheckBox" name="checkBox_xyzAxis1">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>坐标轴</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>点群判断</string>
+       </attribute>
+       <widget class="QFrame" name="frame_4">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>291</width>
+          <height>671</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>500</width>
+          <height>1000</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>251</width>
+           <height>105</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_8">
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_34">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>点群符号</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QPushButton" name="pushButton_SymmetryRefine_PG">
+            <property name="font">
+             <font>
+              <family>Noto Sans CJK SC</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>精修</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="comboBox_symmetry">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>C1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C4</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C5</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C6</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C7</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C8</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C9</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C10</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>S4</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>S6</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>S8</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>S10</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>S12</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ci</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cs</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C2v</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C3v</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C4v</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C5v</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C6v</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C7v</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C8v</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C9v</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C10v</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Coov</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C2h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C3h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C4h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C5h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C6h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C7h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C8h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C9h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C10h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D4</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D5</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D6</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D7</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D8</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D9</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D10</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D2h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D3h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D4h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D5h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D6h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D7h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D8h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D9h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D10h</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Dooh</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D2d</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D3d</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D4d</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D5d</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D6d</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D7d</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D8d</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D9d</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D10d</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>T</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Td</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>O</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Oh</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>I</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ih</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QDoubleSpinBox" name="doubleSpinBox_tolerance">
+            <property name="decimals">
+             <number>2</number>
+            </property>
+            <property name="minimum">
+             <double>0.010000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.010000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_35">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>判断精度</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="pushButton_thermalMove">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>热无序</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QPushButton" name="pushButton_Symmetrypercept_PG">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>判断</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QCheckBox" name="checkBox">
+            <property name="text">
+             <string>旋转</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QPushButton" name="pushButton_PatchMolecule_PG">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>补齐</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>140</y>
+           <width>271</width>
+           <height>65</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_20">
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButton_rotate2">
+            <property name="font">
+             <font>
+              <family>Noto Sans CJK SC</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>旋转</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <widget class="QPushButton" name="pushButton_center_PG">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>居中</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_41">
+            <property name="font">
+             <font>
+              <family>Noto Sans CJK SC</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Y</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QPushButton" name="pushButton_translate2">
+            <property name="font">
+             <font>
+              <family>Noto Sans CJK SC</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>平移</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="lineEdit_YY">
+            <property name="font">
+             <font>
+              <family>Cantarell</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_XX">
+            <property name="font">
+             <font>
+              <family>Cantarell</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLineEdit" name="lineEdit_ZZ">
+            <property name="font">
+             <font>
+              <family>Cantarell</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_42">
+            <property name="font">
+             <font>
+              <family>Noto Sans CJK SC</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Z</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_40">
+            <property name="font">
+             <font>
+              <family>Noto Sans CJK SC</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string> X</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>220</y>
+           <width>269</width>
+           <height>176</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_16">
+          <item row="1" column="1">
+           <widget class="QDial" name="dialAtomScale">
+            <property name="maximum">
+             <number>200</number>
+            </property>
+            <property name="singleStep">
+             <number>5</number>
+            </property>
+            <property name="pageStep">
+             <number>20</number>
+            </property>
+            <property name="value">
+             <number>100</number>
+            </property>
+            <property name="view_option_name" stdset="0">
+             <string>atom_scale</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="pushButton_Bond">
+            <property name="text">
+             <string>键</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QPushButton" name="pushButton_Polyhedron">
+            <property name="text">
+             <string>多面体</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="pushButton_Atom">
+            <property name="text">
+             <string>原子</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QDial" name="dialBondScale">
+            <property name="maximum">
+             <number>200</number>
+            </property>
+            <property name="singleStep">
+             <number>5</number>
+            </property>
+            <property name="pageStep">
+             <number>20</number>
+            </property>
+            <property name="value">
+             <number>100</number>
+            </property>
+            <property name="view_option_name" stdset="0">
+             <string>bond_scale</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QPushButton" name="pushButton_Ring">
+            <property name="text">
+             <string>圆环</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QTextEdit" name="textEdit_MessageDisplay">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>410</y>
+           <width>269</width>
+           <height>419</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab3_2">
+       <attribute name="title">
+        <string>对称轴</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>对称面</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab_3d">
+       <attribute name="title">
+        <string>3D模型</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="View3D" name="view3d"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_coordinate">
+       <attribute name="title">
+        <string>原子坐标</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QFrame" name="frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="CodeEditor" name="textEdit_dataMol"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>230</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>点群</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab3">
+       <attribute name="title">
+        <string>对称轴</string>
+       </attribute>
+       <widget class="QFrame" name="frame">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>273</width>
+          <height>600</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>273</width>
+          <height>620</height>
+         </size>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_18">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_14">
+           <item row="0" column="0">
+            <layout class="QGridLayout" name="gridLayout_9">
+             <item row="1" column="1">
+              <widget class="QCheckBox" name="checkBox_Circle">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>轮廓</string>
+               </property>
+               <property name="tristate">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QCheckBox" name="checkBox_xyzAxis">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>坐标轴</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QCheckBox" name="checkBox_HideMol">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>隐藏分子</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QCheckBox" name="checkBox_HideHydrogen">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>隐藏氢</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QCheckBox" name="checkBox_PGElement">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>点群元素</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QCheckBox" name="checkBox_atomLabel">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>原子序号</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <layout class="QGridLayout" name="gridLayout_19">
+             <item row="5" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_thickness_Cn">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="decimals">
+                <number>2</number>
+               </property>
+               <property name="maximum">
+                <double>5.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.010000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QPushButton" name="pushButton_C3">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>C3轴</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="1">
+              <widget class="QSpinBox" name="spinBox_Cn_blue">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QCheckBox" name="checkBox_CnHide">
+               <property name="text">
+                <string>隐藏</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_Cn_length">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="3">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_radius_C3">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>10.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_diskSize_C2">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>10.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="2">
+              <widget class="QSpinBox" name="spinBox_C2_blue">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_33">
+               <property name="text">
+                <string>长度</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="3">
+              <widget class="QSpinBox" name="spinBox_C3_red">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="0">
+              <widget class="QLabel" name="label_22">
+               <property name="text">
+                <string>蓝</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
+              <widget class="QLabel" name="label_23">
+               <property name="text">
+                <string>绿</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="2">
+              <widget class="QSpinBox" name="spinBox_C2_green">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_27">
+               <property name="text">
+                <string>尺寸</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QCheckBox" name="checkBox_C3Hide">
+               <property name="text">
+                <string>隐藏</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="label_21">
+               <property name="text">
+                <string>红</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QPushButton" name="pushButton_Cn">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>主轴Cn</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="2">
+              <widget class="QSpinBox" name="spinBox_C2_red">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="3">
+              <widget class="QSpinBox" name="spinBox_C3_green">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="label_28">
+               <property name="text">
+                <string>厚度</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_radius_Cn">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>10.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QSpinBox" name="spinBox_Cn_red">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_diskSize_Cn">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>6.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="2">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_C2_length">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="2">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_thickness_C2">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="decimals">
+                <number>2</number>
+               </property>
+               <property name="maximum">
+                <double>5.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.010000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QPushButton" name="pushButton_C2">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>C2轴</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="3">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_C3_length">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="3">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_thickness_C3">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="decimals">
+                <number>2</number>
+               </property>
+               <property name="maximum">
+                <double>5.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.010000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="2">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_radius_C2">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>10.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <widget class="QSpinBox" name="spinBox_Cn_green">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="3">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_diskSize_C3">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>10.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_26">
+               <property name="text">
+                <string>粗细</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QCheckBox" name="checkBox_C2Hide">
+               <property name="text">
+                <string>隐藏</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="3">
+              <widget class="QSpinBox" name="spinBox_C3_blue">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QGridLayout" name="gridLayout_10">
+           <item row="1" column="0">
+            <layout class="QGridLayout" name="gridLayout_6">
+             <item row="4" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_diskSize_Cn_2">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>6.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QSpinBox" name="spinBox_In_blue">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_37">
+               <property name="text">
+                <string>红</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_38">
+               <property name="text">
+                <string>绿</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QSpinBox" name="spinBox_Ci_red">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_39">
+               <property name="text">
+                <string>蓝</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QPushButton" name="pushButton_Ci">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>对称中心</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QSpinBox" name="spinBox_In_green">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QCheckBox" name="checkBox_In_Hide">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="3">
+              <widget class="QSpinBox" name="spinBox_Ci_blue">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QSpinBox" name="spinBox_In_red">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QPushButton" name="pushButton_In">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>反轴(In)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QCheckBox" name="checkBox_Ci_Hide">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="3">
+              <widget class="QSpinBox" name="spinBox_Ci_green">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="singleStep">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="3">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_diskSize_Cn_3">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>6.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_43">
+               <property name="text">
+                <string>尺寸</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QCheckBox" name="checkBox_TypeC2_I">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>C2-I </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="checkBox_TypeC2_II">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>C2-II </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="checkBox_TypeC2_III">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>C2-III 型</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>对称面</string>
+       </attribute>
+       <widget class="QFrame" name="frame_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>11</y>
+          <width>281</width>
+          <height>331</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_11">
+           <item row="3" column="2">
+            <widget class="QSpinBox" name="spinBox_D_type">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>2</number>
+             </property>
+             <property name="singleStep">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QSpinBox" name="spinBox_V_type">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>2</number>
+             </property>
+             <property name="singleStep">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QSpinBox" name="spinBox_D_green">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="3">
+            <widget class="QSpinBox" name="spinBox_H_green">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QSpinBox" name="spinBox_V_blue">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="pushButton_V">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>SigmaV</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_24">
+             <property name="text">
+              <string>厚度</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_H_length">
+             <property name="decimals">
+              <number>2</number>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>蓝</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_V_length">
+             <property name="decimals">
+              <number>2</number>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QSpinBox" name="spinBox_H_type">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>2</number>
+             </property>
+             <property name="singleStep">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QCheckBox" name="checkBox_SigmaD_Hide">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="text">
+              <string>隐藏</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="tristate">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="3">
+            <widget class="QSpinBox" name="spinBox_H_blue">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QSpinBox" name="spinBox_V_green">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QCheckBox" name="checkBox_SigmaV_Hide">
+             <property name="text">
+              <string>隐藏</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2">
+            <widget class="QSpinBox" name="spinBox_D_blue">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="2">
+            <widget class="QSpinBox" name="spinBox_D_opacity">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>5</number>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_H_thickness">
+             <property name="decimals">
+              <number>1</number>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>绿</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_36">
+             <property name="text">
+              <string>类型</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_V_thickness">
+             <property name="decimals">
+              <number>1</number>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QSpinBox" name="spinBox_V_red">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_D_thickness">
+             <property name="decimals">
+              <number>1</number>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QCheckBox" name="checkBox_SigmaH_Hide">
+             <property name="text">
+              <string>隐藏</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_25">
+             <property name="text">
+              <string>透明</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="3">
+            <widget class="QSpinBox" name="spinBox_H_opacity">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>5</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="pushButton_D">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>SigmaD</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>红</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_D_length">
+             <property name="decimals">
+              <number>2</number>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QSpinBox" name="spinBox_D_red">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_29">
+             <property name="text">
+              <string>长高</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QSpinBox" name="spinBox_V_opacity">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>5</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QPushButton" name="pushButton_H">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>SigmaH</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QSpinBox" name="spinBox_H_red">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QGridLayout" name="gridLayout_13">
+           <item row="0" column="3">
+            <widget class="QSpinBox" name="spinBox_bk_blue">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QSpinBox" name="spinBox_bk_green">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_bk">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>背景色</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSpinBox" name="spinBox_bk_red">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Page</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1142</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionFileNew"/>
+    <addaction name="actionFileOpen"/>
+    <addaction name="actionFileClose"/>
+    <addaction name="actionFileSave2PNG"/>
+    <addaction name="actionFileExport"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>视图</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionReset"/>
+    <addaction name="actionXOY"/>
+    <addaction name="actionXOZ"/>
+    <addaction name="actionYOZ"/>
+    <addaction name="actionSymmetryView"/>
+   </widget>
+   <widget class="QMenu" name="menuwindows">
+    <property name="title">
+     <string>窗口</string>
+    </property>
+    <addaction name="actionCascade"/>
+    <addaction name="actionTitles"/>
+   </widget>
+   <widget class="QMenu" name="menuToosBar">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>调整键级</string>
+     </property>
+     <addaction name="actionSingleBond"/>
+     <addaction name="actionDoubleBond"/>
+     <addaction name="actionTripleBond"/>
+     <addaction name="actionQuadrupleBond"/>
+     <addaction name="actionAromaticBond"/>
+     <addaction name="actionWeakBond"/>
+     <addaction name="actionHydrogenbond"/>
+    </widget>
+    <widget class="QMenu" name="menuMM">
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>MM 几何优化</string>
+     </property>
+     <addaction name="actionUFF"/>
+     <addaction name="actionMMFF94"/>
+     <addaction name="actionGhemical"/>
+     <addaction name="actionGaff"/>
+     <addaction name="actionMM2"/>
+    </widget>
+    <addaction name="menuMM"/>
+    <addaction name="menu"/>
+    <addaction name="actionToolsAddHydrogenAuto"/>
+    <addaction name="actionreCalculateBonds"/>
+    <addaction name="actionPeriodicTable"/>
+    <addaction name="actionToolscentralize"/>
+    <addaction name="actionToolsPencil"/>
+    <addaction name="actionToolsRotate"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action_author"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="actionEditUndo"/>
+    <addaction name="actionEditRedo"/>
+    <addaction name="actionEditCut"/>
+    <addaction name="actionEditCopy"/>
+    <addaction name="actionEditPaste"/>
+    <addaction name="actionEditbond"/>
+    <addaction name="actionEditangle"/>
+    <addaction name="actionEditdihedral"/>
+    <addaction name="actionAddHydrogen"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuToosBar"/>
+   <addaction name="menuwindows"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionFileOpen"/>
+   <addaction name="actionFileNew"/>
+   <addaction name="actionEditUndo"/>
+   <addaction name="actionEditRedo"/>
+   <addaction name="actionEditCut"/>
+   <addaction name="actionEditCopy"/>
+   <addaction name="actionEditPaste"/>
+   <addaction name="separator"/>
+   <addaction name="actionxyz"/>
+   <addaction name="actionSymmetryView"/>
+   <addaction name="actionReset"/>
+   <addaction name="separator"/>
+   <addaction name="actionToolscentralize"/>
+   <addaction name="actionXTB_optimize"/>
+   <addaction name="actionToolsRotate"/>
+   <addaction name="separator"/>
+   <addaction name="actionToolsPencil"/>
+   <addaction name="actionEditbond"/>
+   <addaction name="actionEditangle"/>
+   <addaction name="actionEditdihedral"/>
+   <addaction name="actionPeriodicTable"/>
+   <addaction name="actionToolsAddHydrogenAuto"/>
+   <addaction name="separator"/>
+   <addaction name="actionSingleBond"/>
+   <addaction name="actionAromaticBond"/>
+   <addaction name="actionDoubleBond"/>
+   <addaction name="actionTripleBond"/>
+   <addaction name="actionQuadrupleBond"/>
+   <addaction name="actionWeakBond"/>
+   <addaction name="actionHydrogenbond"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSave_as">
+   <property name="icon">
+    <iconset>
+     <normaloff>../images/copy.png</normaloff>../images/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save as...</string>
+   </property>
+  </action>
+  <action name="actionAlignView_Xy">
+   <property name="text">
+    <string>Align to x/y</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>DejaVu Sans</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionAlignView_Xz">
+   <property name="text">
+    <string>Align to x/z</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>DejaVu Sans</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionAlignView_Yz">
+   <property name="text">
+    <string>Align to y/z</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>DejaVu Sans</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About...</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>DejaVu Sans</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionSave_Png">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/picture.png</normaloff>:/images/picture.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Png</string>
+   </property>
+  </action>
+  <action name="actionCascade">
+   <property name="text">
+    <string>Cascade</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionTitles">
+   <property name="text">
+    <string>Titles</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionFileOpen">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/fileOpen.png</normaloff>:/images/fileOpen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionFileClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionBuilderShow">
+   <property name="text">
+    <string>Builder</string>
+   </property>
+  </action>
+  <action name="actionFileNew">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/fileNew.png</normaloff>:/images/fileNew.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionFileSave2PNG">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/picture.png</normaloff>:/images/picture.png</iconset>
+   </property>
+   <property name="text">
+    <string>png图片</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionChangeColor">
+   <property name="text">
+    <string>ChangeColor</string>
+   </property>
+  </action>
+  <action name="actionEditUndo">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/editUndo.png</normaloff>:/images/editUndo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionEditRedo">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/editRedo.png</normaloff>:/images/editRedo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionAddHydrogen">
+   <property name="text">
+    <string>加氢</string>
+   </property>
+  </action>
+  <action name="actionXTB_optimize">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/UFF.png</normaloff>:/images/UFF.png</iconset>
+   </property>
+   <property name="text">
+    <string>XTB 几何优化</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/reset.png</normaloff>:/images/reset.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+  <action name="actionXOY">
+   <property name="text">
+    <string>XOY</string>
+   </property>
+  </action>
+  <action name="actionXOZ">
+   <property name="text">
+    <string>XOZ</string>
+   </property>
+  </action>
+  <action name="actionYOZ">
+   <property name="text">
+    <string>YOZ</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>点群元素</string>
+   </property>
+  </action>
+  <action name="actionSingleBond">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/singlebond.svg</normaloff>:/images/singlebond.svg</iconset>
+   </property>
+   <property name="text">
+    <string>single</string>
+   </property>
+  </action>
+  <action name="actionDoubleBond">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/doublebond.svg</normaloff>:/images/doublebond.svg</iconset>
+   </property>
+   <property name="text">
+    <string>double</string>
+   </property>
+  </action>
+  <action name="actionTripleBond">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/triplebond.svg</normaloff>:/images/triplebond.svg</iconset>
+   </property>
+   <property name="text">
+    <string>triple</string>
+   </property>
+  </action>
+  <action name="action_author">
+   <property name="text">
+    <string>作者</string>
+   </property>
+  </action>
+  <action name="actionSymmetryView">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/symmetry.png</normaloff>:/images/symmetry.png</iconset>
+   </property>
+   <property name="text">
+    <string>对称元素</string>
+   </property>
+  </action>
+  <action name="actionEditbond">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/bond.png</normaloff>:/images/bond.png</iconset>
+   </property>
+   <property name="text">
+    <string>改变键长</string>
+   </property>
+  </action>
+  <action name="actionEditangle">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/angle.png</normaloff>:/images/angle.png</iconset>
+   </property>
+   <property name="text">
+    <string>改变键角</string>
+   </property>
+  </action>
+  <action name="actionEditdihedral">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/dihedral.png</normaloff>:/images/dihedral.png</iconset>
+   </property>
+   <property name="text">
+    <string>二面角</string>
+   </property>
+  </action>
+  <action name="actionToolscentralize">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/center.png</normaloff>:/images/center.png</iconset>
+   </property>
+   <property name="text">
+    <string>分子居中</string>
+   </property>
+  </action>
+  <action name="actionEditPaste">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/editPaste.png</normaloff>:/images/editPaste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionEditCut">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/cut.png</normaloff>:/images/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+  </action>
+  <action name="actionFileExport">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/fileSave.png</normaloff>:/images/fileSave.png</iconset>
+   </property>
+   <property name="text">
+    <string>存盘</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionQuadrupleBond">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/quadruplebond.svg</normaloff>:/images/quadruplebond.svg</iconset>
+   </property>
+   <property name="text">
+    <string>quadruple</string>
+   </property>
+  </action>
+  <action name="actionAromaticBond">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/aromaticbond.svg</normaloff>:/images/aromaticbond.svg</iconset>
+   </property>
+   <property name="text">
+    <string>aromatic</string>
+   </property>
+  </action>
+  <action name="actionWeakBond">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/weakbond.svg</normaloff>:/images/weakbond.svg</iconset>
+   </property>
+   <property name="text">
+    <string>weak</string>
+   </property>
+  </action>
+  <action name="actionHydrogenbond">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/line.png</normaloff>:/images/line.png</iconset>
+   </property>
+   <property name="text">
+    <string>hydrogen</string>
+   </property>
+  </action>
+  <action name="actionToolsAddHydrogenAuto">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/AddHydrogens.gif</normaloff>:/images/AddHydrogens.gif</iconset>
+   </property>
+   <property name="text">
+    <string>自动加氢</string>
+   </property>
+  </action>
+  <action name="actionMMFF94">
+   <property name="text">
+    <string>MMFF94</string>
+   </property>
+  </action>
+  <action name="actionGhemical">
+   <property name="text">
+    <string>Ghemical</string>
+   </property>
+  </action>
+  <action name="actionGaff">
+   <property name="text">
+    <string>Gaff</string>
+   </property>
+  </action>
+  <action name="actionMM2">
+   <property name="text">
+    <string>MM2</string>
+   </property>
+  </action>
+  <action name="actionUFF">
+   <property name="text">
+    <string>UFF</string>
+   </property>
+  </action>
+  <action name="actionreCalculateBonds">
+   <property name="text">
+    <string>重新计算化学键</string>
+   </property>
+  </action>
+  <action name="actionPeriodicTable">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/periodicTabel.png</normaloff>:/images/periodicTabel.png</iconset>
+   </property>
+   <property name="text">
+    <string>元素周期表</string>
+   </property>
+  </action>
+  <action name="actionToolsPencil">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/draw.png</normaloff>:/images/draw.png</iconset>
+   </property>
+   <property name="text">
+    <string>铅笔</string>
+   </property>
+  </action>
+  <action name="actionToolsSelect">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/select.png</normaloff>:/images/select.png</iconset>
+   </property>
+   <property name="text">
+    <string>选择模式</string>
+   </property>
+  </action>
+  <action name="actionToolsRotate">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/rotate.png</normaloff>:/images/rotate.png</iconset>
+   </property>
+   <property name="text">
+    <string>旋转模式</string>
+   </property>
+  </action>
+  <action name="actionEditCopy">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/copy.png</normaloff>:/images/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionxyz">
+   <property name="icon">
+    <iconset resource="../hmo.qrc">
+     <normaloff>:/images/xyz.png</normaloff>:/images/xyz.png</iconset>
+   </property>
+   <property name="text">
+    <string>坐标轴</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TemplateView3d</class>
+   <extends>QOpenGLWidget</extends>
+   <header location="global">templateView3d.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CodeEditor</class>
+   <extends>QTextEdit</extends>
+   <header location="global">codeEditor.h</header>
+  </customwidget>
+  <customwidget>
+   <class>View3D</class>
+   <extends>QOpenGLWidget</extends>
+   <header location="global">View3D.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>pushButton_Cn</tabstop>
+  <tabstop>pushButton_C2</tabstop>
+  <tabstop>pushButton_C3</tabstop>
+  <tabstop>doubleSpinBox_diskSize_Cn</tabstop>
+  <tabstop>doubleSpinBox_diskSize_C2</tabstop>
+  <tabstop>doubleSpinBox_diskSize_C3</tabstop>
+  <tabstop>doubleSpinBox_radius_Cn</tabstop>
+  <tabstop>doubleSpinBox_radius_C2</tabstop>
+  <tabstop>doubleSpinBox_radius_C3</tabstop>
+  <tabstop>doubleSpinBox_thickness_Cn</tabstop>
+  <tabstop>doubleSpinBox_thickness_C2</tabstop>
+  <tabstop>doubleSpinBox_thickness_C3</tabstop>
+  <tabstop>spinBox_Cn_red</tabstop>
+  <tabstop>spinBox_C2_red</tabstop>
+  <tabstop>spinBox_C3_red</tabstop>
+  <tabstop>spinBox_Cn_green</tabstop>
+  <tabstop>spinBox_C2_green</tabstop>
+  <tabstop>spinBox_C3_green</tabstop>
+  <tabstop>spinBox_Cn_blue</tabstop>
+  <tabstop>spinBox_C2_blue</tabstop>
+  <tabstop>spinBox_C3_blue</tabstop>
+  <tabstop>lineEdit_YY</tabstop>
+  <tabstop>pushButton_YZ</tabstop>
+  <tabstop>pushButton_clockwise</tabstop>
+  <tabstop>lineEdit_Z</tabstop>
+  <tabstop>pushButton_Up</tabstop>
+  <tabstop>pushButton_counterclockwise</tabstop>
+  <tabstop>pushButton_translate</tabstop>
+  <tabstop>lineEdit_Y</tabstop>
+  <tabstop>spinBox_angle</tabstop>
+  <tabstop>pushButton_XY</tabstop>
+  <tabstop>lineEdit_X</tabstop>
+  <tabstop>pushButton_Down</tabstop>
+  <tabstop>pushButton_rotate</tabstop>
+  <tabstop>pushButton_XZ</tabstop>
+  <tabstop>pushButton_cleardata</tabstop>
+  <tabstop>pushButton_PatchMolecule_PG</tabstop>
+  <tabstop>lineEdit_ZZ</tabstop>
+  <tabstop>pushButton_Symmetrypercept_PG</tabstop>
+  <tabstop>pushButton_center_PG</tabstop>
+  <tabstop>lineEdit_XX</tabstop>
+  <tabstop>pushButton_translate2</tabstop>
+  <tabstop>pushButton_SymmetryRefine_PG</tabstop>
+  <tabstop>pushButton_rotate2</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../hmo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

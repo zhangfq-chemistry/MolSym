@@ -1,0 +1,72 @@
+(1) Inserting these to  definiation of  vtkActor.h
+//------------------------------------------
+ int  _id, _idMol,  _idMO,  _idAtom, _idAtom1, _idBond, _idUnitCellBox, _idRing;
+  int  _idAtomLabel,  _idBondLabel,  _idChargeLabel, _idFreeValenceLabel;
+  double  _color[3];
+  
+  int  _bondorder;
+
+public:
+  void  setBondOrder (int b) {_bondorder=b;}
+  int    getBondOrder () {return  _bondorder;}
+ 
+  void setRingId(int i) {_idRing=i;}
+  int   getRingId () {return  _idRing;}
+
+public:	
+  void setId (int i) {_id=i;}
+  void setMolId  ( int i ) {_idMol=i;}
+  void setMOId   ( int i ) {_idMO=i;}
+  void setAtomId ( int i ) {_idAtom=i;}
+  void setAtomId1 ( int i ) {_idAtom1=i;}
+  void setBondId ( int i ) {_idBond=i;}
+
+  void setUnitCellBoxId ( int i ) {_idUnitCellBox=i;}
+
+  int  Id () {return _id;}
+  int  MolId () {return _idMol;}
+  int  MOId ()  {return _idMO;}
+
+  int  AtomId () {return _idAtom;} 
+  int  AtomId1 () {return _idAtom1;}
+
+  int  BondId () {return _idBond;}
+  
+   void setAtomLabelId (int i) {_idAtomLabel=i;}
+    void setBondLabelId (int i) {_idBondLabel=i;}
+   void setChargeLabelId (int i) {_idChargeLabel=i;}
+   void setFreeValenceLabelId (int i) {_idFreeValenceLabel=i;}
+    
+   int   getAtomLabelId () {return  _idAtomLabel;}
+   int   getBondabelId() {return  _idBondLabel;}
+   int   getChargeLabelId () {return  _idChargeLabel;} 
+    int  getFreeValenceLabelId () {return  _idFreeValenceLabel;} 
+
+  int  UnitCellBoxId () {return _idUnitCellBox;} 
+
+  void storeColor(double r,double g, double b) ;
+  void recoverInitialColor ()  ;
+//--------------------------------------------------------------
+
+
+(2) appending the following to vtkActor.cxx
+
+  void vtkActor::storeColor(double r,double g, double b) 
+  {	
+  _color[0]=r;	_color[1]=g;	_color[2]=b;
+  } 
+  
+ void vtkActor::recoverInitialColor () 
+  {
+    this->GetProperty()->SetColor( _color); 
+ }
+
+
+(3)compile and install 
+tools/QtColorWidgets
+
+(4) install xtb from website
+
+
+    
+    
